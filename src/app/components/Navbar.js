@@ -53,7 +53,11 @@ export default function Navbar() {
       <div style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
         {['Accueil', 'Actus', 'Profil', 'LFG', 'Coachs'].map((item) => (
           <a key={item}
-            href={item === 'Accueil' ? '/' : `/${item.toLowerCase()}`}
+            href={
+  item === 'Accueil' ? '/' :
+  item === 'Profil' ? '/profile/me' :
+  `/${item.toLowerCase()}`
+}
             style={{
               padding: '6px 12px', borderRadius: 8,
               fontSize: 13, fontWeight: 500,
